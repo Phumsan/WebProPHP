@@ -1,38 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> ตัวอย่าง Control statement ที่ 10 </title></head>
+</head>
+<body>
 <?php
-$x = 100;
-$y = 10;
-$opertor = '-';
-function plus()
-{
-    echo "x + y = ",$GLOBALS['x']+$GLOBALS['y'];
+$start = -2; $end = 3;
+for($num = $start ; $num <= $end ; $num++) {
 
-}
-function sub()
-{
-    echo "x - y = ",$GLOBALS['x']-$GLOBALS['y'] ;
-
-}
-function mul()
-{
-    echo "x * y = ",$GLOBALS['x']*$GLOBALS['y'] ;
-
-}
-function div()
-{
-    echo "x / y = ",$GLOBALS['x']/$GLOBALS['y'] ;
-
-}
-switch ($opertor) {
-    case "+":
-        plus();
-      break;
-    case "-":
-        sub();
-      break;
-    case "*":
-        mul();
-      break;
-    case "/":
-        div();
-      break;
-      }
+  if ($num == 0) {
+  echo "*** ข้ามการหารด้วยศูนย์ เพื่อไม่ให้เกิดความผิดพลาด ***<br>";
+  continue;
+  }
+  echo "100 / $num = " . (100 / $num) . " <br>";
+  }
+  ?>
+  </body>
+  </html>
